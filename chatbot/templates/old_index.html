@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block body %}
+<div class="abs center overlay">
+  <center>
+    <form action="/" method="POST">
+      <input
+        style="width: 40%; height: 50px"
+        type="text"
+        name="chat"
+        id="chatbox"
+        placeholder="Hi there! Type here to talk to me."
+      />
+      <button id="rec" style="height: 55px; width: 7%" type="submit">
+        send
+      </button>
+    </form>
+  </center>
+</div>
+
+{% endblock %}
