@@ -30,7 +30,7 @@ class Chat(db.Model):
     __tablename__ = 'chats'
 
     id = db.Column(db.Integer, primary_key=True)
-    text = db.Column(db.Text, nullable=False)
+    content = db.Column(db.Text, nullable=False)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     message_from_bot = db.Column(db.Boolean, default=False)

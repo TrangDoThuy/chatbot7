@@ -31,11 +31,11 @@ def create_chat():
         flash('Chat cannot be empty')
         return redirect(url_for('.index'))
     
-    chat = Chat(text=text, user=current_user, message_from_bot=False)
+    chat = Chat(content=text, user=current_user, message_from_bot=False)
     db.session.add(chat)
     db.session.commit()
 
-    chat_ans = Chat(text="Good question, I don't know", user=current_user, message_from_bot=True)
+    chat_ans = Chat(content="Good question, I don't know", user=current_user, message_from_bot=True)
     db.session.add(chat_ans)
     db.session.commit()
     

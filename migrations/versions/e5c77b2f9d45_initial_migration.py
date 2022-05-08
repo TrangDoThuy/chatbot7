@@ -27,7 +27,7 @@ def upgrade():
     )
     op.create_table('chats',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('text', sa.Text(), nullable=False),
+    sa.Column('content', sa.Text(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('message_from_bot',sa.Boolean(),nullable=False),
